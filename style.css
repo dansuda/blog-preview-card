@@ -1,13 +1,20 @@
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 42%);
+    --dark-gray: hsl(0, 0%, 7%);
+}
+
 @font-face {
-    font-family: 'FigTree';
+    font-family: 'FigTree, sans-serif';
     src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
     font-weight: 500 800;
 }
 
 html {
     box-sizing: border-box;
-    font-family: 'FigTree';
-    font-size: 16px;
+    font-family: 'FigTree, sans-serif';
+    font-size: 1rem;
 }
 
 *, *::before, *::after {
@@ -19,7 +26,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: hsl(47, 88%, 63%);
+    background-color: var(--yellow);
 }
 
 .maindiv {
@@ -30,27 +37,27 @@ body {
 }
 
 .container {
-    background-color: hsl(0, 0%, 100%);
-    max-width: 384px;
-    max-height: 523px;
-    padding: 25px;
-    border: 1px solid hsl(0, 0%, 7%);
-    border-radius: 16px;
-    box-shadow: 9px 9px;
+    background-color: var(--white);
+    max-width: 24rem;
+    max-height: 32.6875rem;
+    padding: 1.5625rem;
+    border: 0.0625rem solid var(--dark-gray);
+    border-radius: 1rem;
+    box-shadow: 0.5625rem 0.5625rem;
 }
 
 .illustration {
-    border-radius: 16px;
-    margin-bottom: 22px;
+    border-radius: 1rem;
+    margin-block-end: 1.375rem;
 }
 
 button {
     font-weight: 800;
-    background-color: hsl(47, 88%, 63%);
-    color: hsl(0, 0%, 7%);
-    padding: 10px 14px;
+    background-color: var(--yellow);
+    color: var(--dark-gray);
+    padding: 0.625rem 0.875rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
 }
 
 p {
@@ -59,26 +66,27 @@ p {
 
 h1 {
     font-weight: 800;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 h1:hover {
-    color: hsl(47, 88%, 63%);
+    color: var(--yellow);
     cursor: pointer;
     }
 
 .description {
-    color: hsl(0, 0%, 42%);
+    color: var(--light-gray);
 }
 
 .author {
     display: flex;
     align-items: center;
     font-weight: 800;
+    font-size: 0.875rem;
 
     img {
-        margin-right: 12px;
-        width: 33px;
+        margin-inline-end: 0.75rem;
+        width: 2.0625rem;
         cursor: default;
     }
 }
